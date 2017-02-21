@@ -1,13 +1,6 @@
-
+-- outside of 'create'
 local s = require('storage')
 local w = require('widget')
-
-local back = display.newRect(display.contentWidth*0.5, display.contentHeight*0.5, display.contentWidth*2, display.contentHeight*2 )
-local title = display.newText("Information", display.contentWidth*0.5, display.contentHeight*0.1, s.headerFont, 32)
-title:setFillColor(0, 0, 0)
-
-local subtitle = display.newText("Helping to further inform you on bullying.", display.contentWidth*0.5, display.contentHeight*0.2, s.headerFont, 18)
-subtitle:setFillColor(0, 0, 0)
 
 local function btnHandler_1(event)
 
@@ -28,6 +21,15 @@ local function btnHandler_2(event)
 	end
 
 end
+--
+
+-- starting here - inside of create
+local back = display.newRect(display.contentWidth*0.5, display.contentHeight*0.5, display.contentWidth*2, display.contentHeight*2 )
+local title = display.newText("Information", display.contentWidth*0.5, display.contentHeight*0.1, s.headerFont, 32)
+title:setFillColor(0, 0, 0)
+
+local subtitle = display.newText("Helping to further inform you on bullying.", display.contentWidth*0.5, display.contentHeight*0.2, s.headerFont, 18)
+subtitle:setFillColor(0, 0, 0)
 
 local newTextParams = {
 	text = "Loaded by the first tab's\n\"onPress\" listener\nspecified in the 'tabButtons' table", 
@@ -83,6 +85,7 @@ btn_1.y = display.contentHeight*0.92
 
 btn_2.x = display.contentWidth*0.8
 btn_2.y = display.contentHeight*0.92
+--
 
 
 

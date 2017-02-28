@@ -32,7 +32,6 @@ function scene:create( event )
 						align = "center" }
 	local summary = display.newText( newTextParams )
 	summary:setFillColor( 0 ) -- black]]--
-
 	local formButtonOptions = {
 		shape="roundedRect",
 		x=display.contentCenterX,
@@ -50,7 +49,8 @@ function scene:create( event )
 		fillColor = {
 			default = {0.85, 0.9, 1},
 			over = {0.7, 0.7, 0.8}
-		}
+		},
+		--onEvent = goToScreen("")
 	}
 	local formButtonShadOp = {}
 	formButtonShadOp.shape = "roundedRect"
@@ -94,9 +94,10 @@ function scene:create( event )
 			over = {1, 0, 0}
 		},
 		fillColor = {
-			default = {0.85, 0.9, 1},
-			over = {0.7, 0.7, 0.8}
-		}
+			default = {0.85, 1, 0.9},
+			over = {0.7, 0.8, 0.7}
+		},
+		onEvent = function (event) if("ended" == event.phase) then composer.gotoScene("info") end end
 	}
 	local infoButtonShadOp = {}
 	infoButtonShadOp.shape = "roundedRect"
@@ -107,8 +108,8 @@ function scene:create( event )
 	infoButtonShadOp.height = infoButtonOptions.height + 20
 	infoButtonShadOp.label = ""
 	infoButtonShadOp.fillColor = {
-		default = {0.92, 0.95, 1},
-		over = {0.92, 0.95, 1}
+		default = {0.90, 1, 0.92},
+		over = {0.90, 1, 0.92}
 	}
 	local infoButtonShad2Op = {}
 	infoButtonShad2Op.shape = "roundedRect"
@@ -119,8 +120,8 @@ function scene:create( event )
 	infoButtonShad2Op.height = infoButtonOptions.height + 35
 	infoButtonShad2Op.label = ""
 	infoButtonShad2Op.fillColor = {
-		default = {0.95, 0.99, 1},
-		over = {0.95, 0.99, 1}
+		default = {0.95, 1, 0.99},
+		over = {0.95, 1, 0.99}
 	}
 	local infoButtonShad2 = w.newButton(infoButtonShad2Op)
 	local infoButtonShad = w.newButton(infoButtonShadOp)
@@ -130,6 +131,9 @@ function scene:create( event )
 	sceneGroup:insert(formButtonShad2)
 	sceneGroup:insert(formButtonShad)
 	sceneGroup:insert(formButton)
+	sceneGroup:insert(infoButtonShad2)
+	sceneGroup:insert(infoButtonShad)
+	sceneGroup:insert(infoButton)
 	sceneGroup:insert( title )
 	--sceneGroup:insert( summary )
 end

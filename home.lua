@@ -21,7 +21,7 @@ function scene:create( event )
 	background:setFillColor( 1 )	-- white
 	
 	-- create some text
-	local title = display.newText( "Sample Text", display.contentCenterX, 75, storage.headerFont, 50 )
+	local title = display.newText( "Bully Buster", display.contentCenterX, 75, storage.headerFont, 50 )
 	title:setFillColor( 0 )	-- black
 	--local 
 	--[[local newTextParams = { text = "Loaded by the first tab's\n\"onPress\" listener\nspecified in the 'tabButtons' table", 
@@ -50,7 +50,7 @@ function scene:create( event )
 			default = {0.85, 0.9, 1},
 			over = {0.7, 0.7, 0.8}
 		},
-		--onEvent = goToScreen("")
+		onEvent = function (event) if("ended" == event.phase) then composer.gotoScene("report") end end
 	}
 	local formButtonShadOp = {}
 	formButtonShadOp.shape = "roundedRect"

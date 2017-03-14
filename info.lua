@@ -9,27 +9,27 @@ local scene = composer.newScene()
 local s = require('storage')
 local w = require('widget')
 local table = require('table')
-
+local numOfScreens = 10
+local currentScreen = 1
+local function displayScreen()
+	
+end
 local function btnHandler_1(event)
 
-	if (event.phase == "ended") then
-		
-		print('btn was just finished being pressed!!!')
-		
+	if (event.phase == "ended" and currentScreen > 1) then
+		currentScreen = currentScreen - 1
 	end
 
 end
 
 local function btnHandler_2(event)
 
-	if (event.phase == "ended") then
-		
-		print('btn was just finished being pressed!!!')
-		
+	if (event.phase == "ended" and currentScreen < numOfScreens) then
+		currentScreen = currentScreen + 1
 	end
 
 end
---
+
 function deepcopy(orig)
     local orig_type = type(orig)
     local copy
@@ -60,7 +60,7 @@ function scene:create( event )
 	local title = display.newText("Information", display.contentWidth*0.5, display.contentHeight*0.1, s.headerFont, 32)
 	title:setFillColor(0, 0, 0)
 
-	local subtitle = display.newText("Helping to further inform you on bullying.", display.contentWidth*0.5, display.contentHeight*0.2, s.headerFont, 18)
+	local subtitle = display.newText("Helping to further inform you on bullying.", display.contentWidth*0.5, display.contentHeight*0.175, s.bodyFont, 16)
 	subtitle:setFillColor(0, 0, 0)
 
 	--[[local newTextParams = {

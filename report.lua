@@ -1,9 +1,3 @@
------------------------------------------------------------------------------------------
---
--- view2.lua
---
------------------------------------------------------------------------------------------
-
 local composer = require( "composer" )
 local scene = composer.newScene()
 local s = require('storage')
@@ -23,29 +17,12 @@ end
 local function btnHandler_2(event)
 
 	if (event.phase == "ended") then
-		
-		print('next was pressed!')
-		
-		local backer = display.newRect(display.contentWidth*0.5, display.contentHeight*0.5, display.contentWidth*1.5, display.contentHeight*0.3)
-		backer:setFillColor(200/255, 200/255, 200/255, 0.6)
-		checkedObjects = {}
-		newCombinedString = ''
-		for i=1, #checkTable do
-			if checkTable[i].isOn == true then
-				table.insert(checkedObjects, #checkedObjects+1, checkTable[i])
-				
-			end
-		end
-		for i=1, #checkedObjects do
-			newCombinedString = newCombinedString .. checkTable[i] .. ', '
-		end
-		local txt = display.newText('You have claimed that the bully(ies) has(have) demonstrated ' .. newCombinedString .. ' is this correct?', 100, 100)
-		txt:setFillColor(1, 1, 0)
-				
+		composer.gotoScene('moreInfo')		
 	end
 
 end
 --
+
 function deepcopy(orig)
     local orig_type = type(orig)
     local copy

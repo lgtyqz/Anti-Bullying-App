@@ -8,16 +8,15 @@ local composer = require( "composer" )
 local scene = composer.newScene()
 local s = require('storage')
 local w = require('widget')
-local table = require('table')
-local numOfScreens = 10
+local info = require('infotext')
+local numOfScreens = table.getn(info)
 local currentScreen = 1
-local function displayScreen()
-	
-end
+local contentOffset = 0
 local function btnHandler_1(event)
 
 	if (event.phase == "ended" and currentScreen > 1) then
 		currentScreen = currentScreen - 1
+		transition.to(content, {time = 500, transition=easing.outQuad, x=-(currentScreen - 1) * display.contentWidth})
 	end
 
 end
@@ -26,6 +25,8 @@ local function btnHandler_2(event)
 
 	if (event.phase == "ended" and currentScreen < numOfScreens) then
 		currentScreen = currentScreen + 1
+		print(-currentScreen * display.contentWidth)
+		transition.to(content, {time = 500, transition=easing.outQuad, x=-(currentScreen - 1) * display.contentWidth})
 	end
 
 end
@@ -57,10 +58,10 @@ function scene:create( event )
 
 	-- starting here - inside of create
 	local back = display.newRect(display.contentWidth*0.5, display.contentHeight*0.5, display.contentWidth*2, display.contentHeight*2 )
-	local title = display.newText("Information", display.contentWidth*0.5, display.contentHeight*0.1, s.headerFont, 32)
+	local title = display.newText("Information", display.contentWidth*0.5, display.contentHeight*0.1, s.headerFont, 26)
 	title:setFillColor(0, 0, 0)
 
-	local subtitle = display.newText("Helping to further inform you on bullying.", display.contentWidth*0.5, display.contentHeight*0.175, s.bodyFont, 16)
+	local subtitle = display.newText("Helping to further inform you on bullying.", display.contentWidth*0.5, display.contentHeight*0.1625, s.bodyFont, 16)
 	subtitle:setFillColor(0, 0, 0)
 
 	--[[local newTextParams = {
@@ -142,14 +143,32 @@ function scene:create( event )
 	backButOp = w.newButton(backButOp)
 	btn_1.x = display.contentWidth*0.2
 	btn_1.y = display.contentHeight*0.92
-
-	
+	content = display.newGroup()
 	sceneGroup:insert(back)
+	local W = display.contentWidth
+	local H = display.contentHeight
+	for i = 1, numOfScreens do
+		T = display.newText(content, info[i].title, W * (i - 0.5), H * 0.25, s.headerFont, 26)
+		T:setFillColor(0, 0, 0)
+		if info[i].subtitle ~= nil then
+			SUB = display.newText(content, info[i].subtitle, W * (i - 0.5), H * 0.3125, s.headerFont, 18)
+			SUB:setFillColor(0, 0, 0)
+		end
+		if info[i].text ~= nil then
+			TXT = display.newText(content, info[i].text, W * (i - 0.5), H * 0.35, W * 0.95, H * 0.45, s.bodyFont, 14)
+			TXT.anchorY = 0
+			TXT:setFillColor(0, 0, 0)
+		end
+	end
 	sceneGroup:insert(title)
 	sceneGroup:insert(subtitle)
+	L = display.newLine(sceneGroup, display.contentWidth * 0.05, display.contentHeight * 0.2,
+					display.contentWidth * 0.95, display.contentHeight * 0.2)
+	L:setStrokeColor(0, 0, 0)
 	sceneGroup:insert(btn_1)
 	sceneGroup:insert(btn_2)
 	sceneGroup:insert(backButOp)
+	sceneGroup:insert(content)
 --
 end
 
@@ -183,7 +202,7 @@ end
 
 function scene:destroy( event )
 	local sceneGroup = self.view
-	
+	-- display.remove(content)
 	-- Called prior to the removal of scene's "view" (sceneGroup)
 	-- 
 	-- INSERT code here to cleanup the scene

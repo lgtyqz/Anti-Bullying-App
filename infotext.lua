@@ -10,7 +10,7 @@ Students often describe bullying as when "someone makes you feel less about who 
 		]],
 		image= nil
 	},
-	{
+	{ -- Oboma
 		title= "The Types of Bullying",
 		subtitle= "Physical Bullying",
 		text= [[
@@ -22,9 +22,9 @@ Students often describe bullying as when "someone makes you feel less about who 
 		◆ Damaging property
 		It can cause both short-term and long-term damage.²
 		]],
-		image= nil
+		image= "./Images/Oboma.jpg"
 	},
-	{
+	{ -- MtnDew
 		title= "The Types of Bullying",
 		subtitle= "Verbal Bullying",
 		text= [[
@@ -36,7 +36,21 @@ Students often describe bullying as when "someone makes you feel less about who 
 		◆ Verbal Abuse
 		Verbal bullying may start off mostly harmless, but it can severely demoralize the victim and possibly drive them to suicide.²
 		]],
-		image= nil
+		image= "./Images/MtnDew.png"
+	},
+	{ -- 8-bit Barkley's haunted SLAM!
+		title="The Types of Bullying",
+		subtitle="Social Bullying",
+		text = [[
+		Social bullying harms the victim by destroying their reputation.
+		Social bullying includes:
+		◆ Lying, spreading rumors
+		◆ Damaging someone's reputation
+		◆ Encouraging others to socially exclude someone
+		◆ Menacing looks
+		Unlike the other types of bullying, this one often isn't direct and is harder to recognize.
+		]],
+		image="./Images/Gaiden.jpg"
 	},
 	{
 		title="[INSERT TITLE HERE]",
@@ -44,7 +58,7 @@ Students often describe bullying as when "someone makes you feel less about who 
 		text = [[
 		̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿
 		]],
-		image=nil
+		image="./Images/Colors.png"
 	},
 	{
 		title="[INSERT TITLE HERE]",
@@ -52,15 +66,7 @@ Students often describe bullying as when "someone makes you feel less about who 
 		text = [[
 		̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿
 		]],
-		image=nil
-	},
-	{
-		title="[INSERT TITLE HERE]",
-		subtitle="ha lol",
-		text = [[
-		̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿
-		]],
-		image=nil
+		image="./Images/Dat_boi.jpg"
 	},
 	{
 		title="[INSERT TITLE HERE]",

@@ -155,9 +155,19 @@ function scene:create( event )
 			SUB:setFillColor(0, 0, 0)
 		end
 		if info[i].text ~= nil then
-			TXT = display.newText(content, info[i].text, W * (i - 0.5), H * 0.35, W * 0.95, H * 0.45, s.bodyFont, 14)
-			TXT.anchorY = 0
-			TXT:setFillColor(0, 0, 0)
+			if info[i].image == nil then
+				TXT = display.newText(content, info[i].text, W * (i - 0.5), H * 0.35, W * 0.95, H * 0.45, s.bodyFont, 14)
+				TXT.anchorY = 0
+				TXT:setFillColor(0, 0, 0)
+			else
+				IMG = display.newImage(content, info[i].image, W * (i - 0.5), H * 0.45)
+				scalar = (H * 0.2) / IMG.height
+				IMG.height = IMG.height * scalar
+				IMG.width = IMG.width * scalar
+				TXT = display.newText(content, info[i].text, W * (i - 0.5), H * 0.55, W * 0.95, H * 0.35, s.bodyFont, 14)
+				TXT.anchorY = 0
+				TXT:setFillColor(0, 0, 0)
+			end
 		end
 	end
 	sceneGroup:insert(title)

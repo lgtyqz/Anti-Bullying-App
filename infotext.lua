@@ -53,10 +53,16 @@ Students often describe bullying as when "someone makes you feel less about who 
 		image="./Images/Gaiden.jpg"
 	},
 	{
-		title="[INSERT TITLE HERE]",
-		subtitle="ha lol",
+		title="The Types of Bullying",
+		subtitle="Cyber bullying",
 		text = [[
-		̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿
+		Cyber bullying involves the use of digital technology or social media to harm others.
+		Cyber bullying includes:
+		◆ Abusive or hurtful posts, texts, emails, or messages
+		◆ Deliberately excluding others online
+		◆ Maliciously impersonating others online
+		◆ Lying, spreading rumors online
+		It can happen at any time, and can be either in private or in public.
 		]],
 		image="./Images/Colors.png"
 	},
@@ -93,10 +99,15 @@ Students often describe bullying as when "someone makes you feel less about who 
 		image=nil
 	},
 	{
-		title="[INSERT TITLE HERE]",
-		subtitle="ha lol",
+		title="Sources",
+		subtitle=nil,
 		text = [[
-		̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿
+		Sources:
+		1. http://www.pacer.org/bullying/resources/questions-answered/how-is-bullying-defined.asp
+		2. https://www.ncab.org.au/bullying-advice/bullying-for-parents/types-of-bullying/
+		3.  
+		4.  
+		5. 
 		]],
 		image=nil
 	}

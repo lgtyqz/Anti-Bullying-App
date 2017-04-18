@@ -50,7 +50,7 @@ function scene:create( event )
 			default = {0.85, 0.9, 1},
 			over = {0.7, 0.7, 0.8}
 		},
-		onEvent = function (event) if("ended" == event.phase) then composer.gotoScene("report") end end
+		onEvent = function (event) if("ended" == event.phase) then composer.gotoScene("typeOfAttack") end end
 	}
 	local formButtonShadOp = {}
 	formButtonShadOp.shape = "roundedRect"

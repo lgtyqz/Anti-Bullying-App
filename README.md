@@ -20,3 +20,10 @@ The main (planned) features of this app are:
   - Info UI Framework complete, though lots of filler is in there
 - Online research underway
 - Data collection plan (survey) complete
+
+# TODO:
+- Finish Data Collection ↴ (Immediate)
+- Finish Online Research ↴ (Immediate)
+- Finish Feature Planning ↴ (Immediate)
+- Create Features ↴ (Future)
+- Testing & Revision (Future)

@@ -12,3 +12,11 @@ The main (planned) features of this app are:
 - **In-app Communication**: This keeps private conversations private and enables long-distance communication with trusted adults.
 - **Detailed Reporting**: So that all the necessary information is here in a short, easily readable format.
 - **Information about Bullying**: So that students know both WHAT bullying is and HOW they can stop it.
+
+# Progress Report:
+- Fundamentals (prone to change if feature list changes):
+  - Startup UI (mostly) complete
+  - Reporting UI partially complete
+  - Info UI Framework complete, though lots of filler is in there
+- Online research underway
+- Data collection plan (survey) complete

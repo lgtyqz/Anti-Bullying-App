@@ -21,9 +21,11 @@ The main (planned) features of this app are:
 - Online research underway
 - Data collection plan (survey) complete
 
-# TODO:
-- Finish Data Collection ↴ (Immediate)
-- Finish Online Research ↴ (Immediate)
-- Finish Feature Planning ↴ (Immediate)
-- Create Features ↴ (Future)
-- Testing & Revision (Future)
+# Plan:
+1. **Research** the causes of bullying & ways to combat it online ↴ (Immediate)
+2. **Collect** data from people about how they would like to combat bullying ↴ (Immediate)
+3. **Plan** App Features based on research ↴ (Immediate)
+4. **Create** Features with Corona SDK, which is automatically cross-platform ↴ (Future)
+    - May need to use a different software base if Corona SDK has crippling limitations, but we should at least start with Corona SDK for easy prototyping
+5. **Testing** & Revision (Future)
+6. **Porting** might be necessary
